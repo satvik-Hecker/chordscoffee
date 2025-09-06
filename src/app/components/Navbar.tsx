@@ -31,7 +31,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="group relative text-cream-light hover:text-[#f1e9da]/90 transition-colors text-sm md:text-base lg:text-lg tracking-wide uppercase transition-transform duration-200 ease-out hover:-translate-y-0.5"
+                className="group relative text-cream-light hover:text-[#f1e9da]/90 transition-colors text-sm md:text-base lg:text-lg tracking-wide uppercase duration-200 ease-out hover:-translate-y-0.5"
               >
                 <span>{item.name}</span>
                 <span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
@@ -77,7 +77,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="group relative text-cream-light hover:text-gold transition-colors font-medium text-sm md:text-base lg:text-lg tracking-wide uppercase transition-transform duration-200 ease-out hover:-translate-y-0.5"
+                className="group relative text-cream-light hover:text-gold transition-colors font-medium text-sm md:text-base lg:text-lg tracking-wide uppercase  duration-200 ease-out hover:-translate-y-0.5"
               >
                 <span>{item.name}</span>
                 <span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
