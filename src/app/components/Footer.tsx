@@ -1,210 +1,133 @@
 "use client"
-import React, { useState } from "react"
+import React from "react"
 import Link from "next/link"
-import { Instagram, Facebook, X } from "lucide-react"
+import { Instagram, Facebook, X, MapPin, Phone, Mail } from "lucide-react"
 
-const Footer=()=>{
-    return (
-        <footer className="relative z-10 bg-[#36231c] backdrop-blur-sm border-t border-white/10 text-white py-8">
-            <div className="max-w-7xl mx-auto">
-                {/* Main Footer */}
-                <div className="flex justify-around  items-center mb-8">
-                    <div className="flex flex-col ">
-                        <h1 className="text-[#f1e9da] tracking-wider leading-16 text-6xl font-bold ">
-                       Chords & Coffee
-                        </h1>
-                        <p className="text-2xl text-[#f1e9da]/80 tracking-wider">The Music Store Café</p>
-                        <div className="mt-4 flex  gap-4">
-                        <Link
-                            href="https://www.instagram.com/chordscoffee/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center bg-white/5 justify-center h-10 w-10 rounded-full border border-[#36231c] text-[#f1e9da] hover:bg-[#f1e9da] hover:text-[#36231c] transition-all duration-300"
-                            >
-                            <Instagram className="h-5 w-5" />
-                        </Link>
-                        <Link
-                            href="https://www.facebook.com/chordscoffee"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center bg-white/5 justify-center h-10 w-10 rounded-full border border-[#36231c] text-[#f1e9da] hover:bg-[#f1e9da] hover:text-[#36231c] transition-all duration-300"
-                            >
-                            <Facebook className="h-5 w-5" />
-                        </Link>
-                        <Link
-                            href="https://www.facebook.com/chordscoffee"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center bg-white/5 justify-center h-10 w-10 rounded-full border border-[#36231c] text-[#f1e9da] hover:bg-[#f1e9da] hover:text-[#36231c] transition-all duration-300"
-                            >
-                            <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            className="h-5 w-5 text-[#f1e9da]" 
-                            enableBackground="new 0 0 72 72" 
-                            viewBox="0 0 72 72" 
-                            id="twitter-x"
-                        >
-                            <switch>
-                            <g>
-                                <path d="M42.5,31.2L66,6h-6L39.8,27.6L24,6H4l24.6,33.6L4,66
-                                        h6l21.3-22.8L48,66h20L42.5,31.2z M12.9,10h8l38.1,52h-8L12.9,10z" 
-                                    fill="currentColor"> {/* Use currentColor for Tailwind to manage fill */}
-                                </path>
-                            </g>
-                            </switch>
-                        </svg>
-                        </Link>
-                    </div>                        
-                    </div>
-
-                    
-                    <div id="quick" className="font-sans">
-                        <h2 className="text-xl mb-4  text-[#f1e9da]/80 font-semibold">Our Store</h2>
-                        <div className="flex flex-col gap-4">
-                        <Link
-                            href="#about"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70 text-lg hover:text-white transition-colors"
-                            
-                        >
-                            About Us
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/satvik-tiwari-67099b293/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70  text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Events
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/satvik-tiwari-67099b293/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70 text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Find Us
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/satvik-tiwari-67099b293/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70 text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Join our team
-                        </Link>
-                    </div>
-                    </div>
-                    <div id="order">
-                        <h2 className="text-xl mb-4 font-mono text-[#f1e9da]/80 font-semibold">Quick Links</h2>
-                        <div className="flex flex-col gap-4">
-                        <Link
-                            href="#about"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70 font-mono text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Order on Swiggy
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/satvik-tiwari-67099b293/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70 font-mono text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Order on Zomato
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/satvik-tiwari-67099b293/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70 font-mono text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Reserve a Table
-                        </Link>
-                    </div>
-                
-                </div>
-                    <div id="f-menu">
-                        <h2 className="text-xl mb-4 font-sans text-[#f1e9da]/80 font-semibold">Menu</h2>
-                        <div className="flex flex-col font-sans gap-4">
-                        <Link
-                            href="#about"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70  text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Paninis & Plates
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/satvik-tiwari-67099b293/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70  text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Sides & Snacks
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/satvik-tiwari-67099b293/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70  text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Waffles & Sweets
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/satvik-tiwari-67099b293/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/70  text-lg hover:text-white transition-colors"
-                            
-                        >
-                            Beverages
-                        </Link>
-                    </div>
-                
-                </div>
-                    <div id="follow">
-                        <h2 className="text-xl mb-4 font-mono text-[#f1e9da]/80 font-semibold">Follow Us</h2>
-                        <div className="flex  gap-4">
-                        <Link
-                            href="https://www.instagram.com/chordscoffee/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center bg-white/5 justify-center h-10 w-10 rounded-full border border-[#36231c] text-[#f1e9da] hover:bg-[#f1e9da] hover:text-[#36231c] transition-all duration-300"
-                            >
-                            <Instagram className="h-5 w-5" />
-                        </Link>
-                        <Link
-                            href="https://www.facebook.com/chordscoffee"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center bg-white/5 justify-center h-10 w-10 rounded-full border border-[#36231c] text-[#f1e9da] hover:bg-[#f1e9da] hover:text-[#36231c] transition-all duration-300"
-                            >
-                            <Facebook className="h-5 w-5" />
-                        </Link>
-                    </div>
-                
-                </div>
+const Footer = () => {
+  const address = 'G4/17, Bhanot House, Commercial Complex, Yusuf Sarai, New Delhi 110016';
+  const encodedAddress = encodeURIComponent(address);
+  return (
+    <footer className="relative z-10 font-sans bg-[#36231c] backdrop-blur-sm border-t border-white/10 text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Main Footer Content */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+          
+          {/* Left Section: Logo and Social Links */}
+          <div className="flex flex-col mb-8 md:mb-0">
+            <h1 className="text-[#f1e9da]  tracking-wider text-4xl sm:text-5xl lg:text-6xl font-bold">
+              Chords & Coffee
+            </h1>
+            <p className="text-xl sm:text-2xl font-sans text-[#f1e9da]/80 tracking-wider mt-1">The Music Store Café</p>
+            <div className="mt-6 flex gap-4">
+              <Link
+                href="https://www.instagram.com/chordscoffee/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-white/5 justify-center h-10 w-10 rounded-full border border-[#36231c] text-[#f1e9da] hover:bg-[#f1e9da] hover:text-[#36231c] transition-all duration-300"
+              >
+                <Instagram className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://www.facebook.com/chordscoffee"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-white/5 justify-center h-10 w-10 rounded-full border border-[#36231c] text-[#f1e9da] hover:bg-[#f1e9da] hover:text-[#36231c] transition-all duration-300"
+              >
+                <Facebook className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://twitter.com/chordscoffee"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-white/5 justify-center h-10 w-10 rounded-full border border-[#36231c] text-[#f1e9da] hover:bg-[#f1e9da] hover:text-[#36231c] transition-all duration-300"
+              >
+                <X className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+          
+          {/* Right Section: Navigation Links */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 font-sans gap-8 md:gap-12 text-white/70">
+            
+            {/* Our Store Section */}
+            <div id="our-store">
+              <h2 className="text-xl mb-4 text-[#f1e9da]/80 font-semibold">Our Store</h2>
+              <div className="flex flex-col gap-2">
+                <Link href="#about" className="hover:text-white transition-colors">
+                  About Us
+                </Link>
+                <Link href="#events" className="hover:text-white transition-colors">
+                  Events
+                </Link>
+                <Link href="#findus" className="hover:text-white transition-colors">
+                  Find Us
+                </Link>
+                <Link href="#team" className="hover:text-white transition-colors">
+                  Join our team
+                </Link>
+              </div>
             </div>
 
-           <div className="border-t border-white/10 pt-4 flex justify-center">
-            <span className="text-sm text-white/50 font-sans">
-                Copyright © 2025 Chords & Coffee. All rights reserved.
-            </span>
+            {/* Quick Links Section */}
+            <div id="quick-links">
+              <h2 className="text-xl mb-4 text-[#f1e9da]/80 font-semibold">Quick Links</h2>
+              <div className="flex flex-col gap-2">
+                <Link href="#swiggy" className="hover:text-white transition-colors">
+                  Order on Swiggy
+                </Link>
+                <Link href="#zomato" className="hover:text-white transition-colors">
+                  Order on Zomato
+                </Link>
+                <Link href="#reserve" className="hover:text-white transition-colors">
+                  Reserve a Table
+                </Link>
+              </div>
             </div>
+            
+            {/* Contact Section */}
+            <div id="contact" className="col-span-2 sm:col-span-1">
+              <h2 className="text-xl mb-4 text-[#f1e9da]/80 font-semibold">Contact</h2>
+              <div className="flex flex-col gap-3">
+                <div className="flex gap-2">
+                  <Mail className="h-5 w-5 flex-shrink-0 mt-1" />
+                  <Link href="mailto:chordscoffee.team@gmail.com" className="text-md hover:text-white transition-colors">
+                    chordscoffee.team@gmail.com
+                  </Link>
+                </div>
+                <div className="flex gap-2">
+                  <Phone className="h-5 w-5 flex-shrink-0 mt-1" />
+                  <div className="flex flex-col">
+                    <Link href="tel:+919990666017" className="text-md hover:text-white transition-colors">+91-9990666017</Link>
+                    <Link href="tel:+919871881666" className="text-md hover:text-white transition-colors">+91-9871881666</Link>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <MapPin className="h-5 w-5 flex-shrink-0 mt-1" />
+                  <Link
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-md hover:text-white transition-colors"
+                  >
+                    G4/17, Bhanot House, Commercial Complex, <br />
+                    Yusuf Sarai, New Delhi 110016
+                  </Link>
+                </div>
+              </div>
             </div>
-        </footer>
-    )
+            
+          </div>
+        </div>
+
+        {/* Copyright Section */}
+        <div className="border-t border-white/10 pt-6 flex justify-center text-center">
+          <span className="text-sm text-white/50">
+            Copyright © 2025 Chords & Coffee. All rights reserved.
+          </span>
+        </div>
+      </div>
+    </footer>
+  )
 }
 export default Footer;
