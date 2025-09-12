@@ -1,3 +1,4 @@
+"use client"
 import { div } from "framer-motion/client";
 import { useState } from 'react';
 import { MapPin, Clock, Phone, Mail, MessageSquare, Home } from 'lucide-react';
@@ -5,15 +6,15 @@ import { Button } from "./ui/Button";
 import { Card, CardContent } from "./ui/Card";
 import { Input } from "./ui/Input";
 import { Label } from "@radix-ui/react-label";
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useToast } from '@/hooks/use-toast';
+import { Textarea } from "./ui/Textarea";
+import { Select,SelectTrigger,SelectValue,SelectContent,SelectItem } from "./ui/Select";
+import { toast } from "sonner";
 
 
 
 
 export default function Contact(){
-    const { toast } = useToast();
+    
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,8 +28,6 @@ export default function Contact(){
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create Google Forms URL with pre-filled data
-    // Replace with your actual Google Form ID
     const googleFormId = 'YOUR_GOOGLE_FORM_ID';
     const baseUrl = `https://docs.google.com/forms/d/e/${googleFormId}/formResponse`;
     
@@ -46,10 +45,7 @@ export default function Contact(){
     // Open Google Form in new tab (for now, until proper integration)
     window.open(`${baseUrl}?${params}`, '_blank');
     
-    toast({
-      title: "Reservation Request Sent!",
-      description: "We'll confirm your reservation within 24 hours.",
-    });
+    toast("We'll confirm your reservation within 24 hours.");
 
     // Reset form
     setFormData({
@@ -68,23 +64,22 @@ export default function Contact(){
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-amber-950 font-sans">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Side - Contact Information */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <p className="text-sm uppercase tracking-wide text-musical-note font-medium">CONTACT US</p>
-              <h2 className="text-5xl font-bold text-coffee-dark leading-tight">Get in Touch</h2>
+              
+              <h2 className="text-5xl font-bold text-coffee-dark leading-tight">Visit Us</h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
-                Experience the perfect blend of artisanal coffee and live music. 
-                Reserve your table or get in touch with any questions.
-              </p>
+                Swing by Chords & Coffee — where perfect brews light up your day. &nbsp;  We're the cozy corner you'll want to gatekeep but can't ;).&nbsp; Grab a seat, plug in your headphones, or jam with us live.</p>
             </div>
 
             <div className="space-y-2">
-              <p className="text-sm uppercase tracking-wide text-muted-foreground font-medium">CALL US ANYTIME</p>
-              <p className="text-3xl font-bold text-coffee-dark">(555) 123-CAFE</p>
+              <p className="text-lg  tracking-wide text-muted-foreground font-medium">Contact Us</p>
+              <p className="text-sm  tracking-wide text-muted-foreground font-medium">Slide into our DMs (or, y’know, email us if you’re feeling old-school).</p>
+              <p className="text-3xl font-bold text-coffee-dark">+91-9990666017</p>
             </div>
           </div>
 

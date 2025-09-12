@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local"
+import { Toaster } from "sonner";
 
 const coffee = localFont( {
   src: "coffee-rg.otf"
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${coffee.className} antialiased`}
       >
         {children}
+        <Toaster></Toaster>
       </body>
     </html>
   );
