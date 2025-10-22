@@ -77,7 +77,7 @@ export default function Contact(){
             </div>
 
             <div className="space-y-2">
-              <p className="text-lg  tracking-wide text-muted-foreground font-medium">Contact Us</p>
+              <h3 className="text-lg  tracking-wide text-muted-foreground font-medium">Contact Us</h3>
               <p className="text-sm  tracking-wide text-muted-foreground font-medium">Slide into our DMs (or, y’know, email us if you’re feeling old-school).</p>
               <p className="text-3xl font-bold text-coffee-dark">+91-9990666017</p>
             </div>
