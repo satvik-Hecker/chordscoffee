@@ -1,11 +1,11 @@
 "use client"
-import { div } from "framer-motion/client";
+
 import { useState } from 'react';
-import { MapPin, Clock, Phone, Mail, MessageSquare, Home } from 'lucide-react';
+import { MapPin, Clock, Phone, MessageSquare, Home } from 'lucide-react';
 import { Button } from "./ui/Button";
 import { Card, CardContent } from "./ui/Card";
 import { Input } from "./ui/Input";
-import { Label } from "@radix-ui/react-label";
+
 import { Textarea } from "./ui/Textarea";
 import { Select,SelectTrigger,SelectValue,SelectContent,SelectItem } from "./ui/Select";
 import { toast } from "sonner";
@@ -73,7 +73,7 @@ export default function Contact(){
               
               <h2 className="text-5xl font-bold text-coffee-dark leading-tight">Visit Us</h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
-                Swing by Chords & Coffee — where perfect brews light up your day. &nbsp;  We're the cozy corner you'll want to gatekeep but can't ;).&nbsp; Grab a seat, plug in your headphones, or jam with us live.</p>
+                Swing by Chords & Coffee — where perfect brews light up your day. &nbsp;  Were the cozy corner youll want to gatekeep but cant ;).&nbsp; Grab a seat, plug in your headphones, or jam with us live.</p>
             </div>
 
             <div className="space-y-2">
@@ -86,6 +86,7 @@ export default function Contact(){
           {/* Right Side - Contact Form */}
           <Card className="shadow-[var(--shadow-card)] bg-card border-0">
             <CardContent className="p-8">
+              <h2 className="text-5xl font-bold text-coffee-dark leading-tight">Visit Us</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Input
@@ -178,7 +179,7 @@ export default function Contact(){
             <div>
               <h3 className="font-bold text-coffee-dark mb-2 uppercase tracking-wide">MESSAGE</h3>
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Send us a message and we'll respond within 24 hours
+                Send us a message and well respond within 24 hours
               </p>
               <p className="font-medium text-musical-note">hello@coffeeandchords.com</p>
             </div>
