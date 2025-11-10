@@ -72,7 +72,7 @@ export default function BookingTable() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-6 py-20">
-        <h2 className="text-5xl md:text-6xl font-extrabold text-[#4b2e05] mb-10 font-serif tracking-wide drop-shadow-sm">
+        <h2 className="text-5xl md:text-6xl font-extrabold text-[#4b2e05] mb-10 font-sans tracking-wide drop-shadow-sm">
           Book Your Seat
         </h2>
 
