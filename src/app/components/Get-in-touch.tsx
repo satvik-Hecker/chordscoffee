@@ -1,13 +1,19 @@
 "use client"
 import { MailIcon, Phone, Home } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function Contact() {
   return (
-    <section className="bg-[#ede9df] font-sans">
-      {/* Contact Methods Grid */}
+    <motion.section
+      className="bg-[#ede9df] font-sans"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      {/* --- everything else stays exactly the same --- */}
       <div className="max-w-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3">
-          {/* Email (mailto) */}
+          {/* Email card */}
           <a
             href="mailto:chordscoffee.team@gmail.com"
             aria-label="Email chordscoffee.team@gmail.com"
@@ -17,26 +23,21 @@ export default function Contact() {
                        hover:motion-safe:scale-[1.02] hover:shadow-lg"
           >
             <div className="flex items-center gap-3">
-              {/* icon container - fixed size so text never shifts */}
               <span className="flex-shrink-0 inline-flex items-center justify-center w-6 h-6">
                 <MailIcon className="w-6 h-6 text-[#ede9df]" />
               </span>
-
-              {/* label + value */}
               <div className="flex flex-col items-center sm:items-start">
                 <p className="font-medium text-lg text-[#ede9df] break-words">
                   chordscoffee.team@gmail.com
                 </p>
               </div>
             </div>
-
-            {/* Description below */}
             <p className="text-base text-[#ede9df]/90 leading-relaxed max-w-xs">
               Mail us your worries away — we&apos;re all ears (and coffee).
             </p>
           </a>
 
-          {/* Phone (tel) */}
+          {/* Phone card */}
           <a
             href="tel:+919990666017"
             aria-label="Call +91 9990666017"
@@ -49,20 +50,17 @@ export default function Contact() {
               <span className="flex-shrink-0 inline-flex items-center justify-center w-6 h-6">
                 <Phone className="w-6 h-6 text-[#ede9df]" />
               </span>
-
               <div className="flex flex-col items-center sm:items-start">
                 <p className="font-medium text-lg text-[#ede9df]">+91-9990666017</p>
                 <p className="font-medium text-lg text-[#ede9df]">+91-9871881666</p>
               </div>
             </div>
-
-            {/* Description below */}
             <p className="text-base text-[#ede9df]/90 leading-relaxed max-w-xs">
               Ring for coffee, rhythm, or a good chat.
             </p>
           </a>
 
-          {/* Address (maps) */}
+          {/* Address card */}
           <a
             href="https://www.google.com/maps/search/?api=1&query=Yusuf+Sarai+New+Delhi"
             target="_blank"
@@ -77,13 +75,10 @@ export default function Contact() {
               <span className="flex-shrink-0 inline-flex items-center justify-center w-6 h-6">
                 <Home className="w-6 h-6 text-[#ede9df]" />
               </span>
-
               <div className="flex flex-col items-center sm:items-start">
                 <p className="font-medium text-lg text-[#ede9df]">Yusuf Sarai, New Delhi</p>
               </div>
             </div>
-
-            {/* Description below */}
             <p className="text-base text-[#ede9df]/90 leading-relaxed max-w-xs">
               Visit our cozy café in the heart of the city.
             </p>
@@ -105,6 +100,6 @@ export default function Contact() {
           className="h-[300px] sm:h-[400px] md:h-[500px]"
         ></iframe>
       </div>
-    </section>
+    </motion.section>
   )
 }
