@@ -7,7 +7,7 @@ const Footer = () => {
   const address = 'G4/17, Bhanot House, Commercial Complex, Yusuf Sarai, New Delhi 110016';
   const encodedAddress = encodeURIComponent(address);
   return (
-    <footer className="relative z-10 font-sans bg-[#36231c] backdrop-blur-sm border-t border-white/10 text-white py-12">
+    <footer className="relative z-10 font-sans bg-[#36231c] backdrop-blur-sm border-t border-white/10 text-white py-12 break-words">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Content */}

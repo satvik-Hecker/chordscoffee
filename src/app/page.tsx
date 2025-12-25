@@ -3,17 +3,18 @@ import BookingTable from "./components/BookTable";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./components/Get-in-touch";
-import CareerSection from "./components/Career";
-
+import MenuSection from "./components/Menu";
+import { BakeryMarqueeDemo } from "./components/ui/AdjMarq";
 export default function Home() {
   return (
     <div className="bg-[#f1e9da] min-h-screen">
       <Navbar></Navbar>
       <div className="h-50"></div>
-      <CareerSection></CareerSection>
-      
+      {/* <CareerSection></CareerSection>
+      <MenuSection></MenuSection>       */}
       <BookingTable></BookingTable>
       <Contact></Contact>
+      <BakeryMarqueeDemo></BakeryMarqueeDemo>
       <Footer></Footer>
     </div>
   );

@@ -118,12 +118,20 @@ export default function BookingTable() {
                   <div className="relative">
                     <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-[#6b4c3b] w-5 h-5" />
                     <Input
-                      type="date"
+                      type="text"
+                      placeholder="dd-mm-yyyy"
                       value={formData.date}
                       onChange={(e) => handleInputChange("date", e.target.value)}
                       min={new Date().toISOString().split("T")[0]}
                       required
-                      className={`${inputStyle} appearance-none text-[#4b2e05]`}
+                      className={`${inputStyle} appearance-none text-[#4b2e05] [&::-webkit-calendar-picker-indicator]:hidden`}
+                      onFocus={(e) => {
+                        e.target.type = "date";
+                        e.target.showPicker?.();
+                      }}
+                      onBlur={(e) => {
+                        if (!e.target.value) e.target.type = "text";
+                      }}
                     />
                   </div>
                 </div>
