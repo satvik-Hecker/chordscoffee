@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./components/Get-in-touch";
 import MenuSection from "./components/Menu";
+import OrderReserveSection from "./components/OrderOnline";
 import { BakeryMarqueeDemo } from "./components/ui/AdjMarq";
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="h-50"></div>
       {/* <CareerSection></CareerSection>
       <MenuSection></MenuSection>       */}
+      <OrderReserveSection></OrderReserveSection>
       <BookingTable></BookingTable>
       <Contact></Contact>
       <BakeryMarqueeDemo></BakeryMarqueeDemo>

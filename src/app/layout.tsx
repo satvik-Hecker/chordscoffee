@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Patua_One } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local"
 import { Toaster } from "sonner";
@@ -11,6 +12,13 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const patua = Patua_One({
+  subsets: ["latin"],
+  weight: "400", // only available weight
+  variable: "--font-patua",
+  display: "swap",
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -29,8 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${coffee.className} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${coffee.className} antialiased ${patua.variable}`}
       >
         {children}
         <Toaster></Toaster>

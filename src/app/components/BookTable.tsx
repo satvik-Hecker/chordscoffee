@@ -49,7 +49,7 @@ export default function BookingTable() {
     "pl-10 h-12 bg-[#f9f9f9] border border-[#e6dfd5] focus:border-[#4b2e05] focus:ring-transparent focus:ring-offset-0 focus:outline-none focus:ring-0 focus:bg-white focus:text-[#4b2e05] transition-all rounded-lg placeholder:text-[#9ca3af] text-[#4b2e05] placeholder:text-[#8c7b6e]";
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#f3f0eb] p-4 md:p-6 font-sans">
+    <section id="book-table" className="min-h-screen flex items-center justify-center bg-[#f3f0eb] p-4  font-sans">
       {/* MAIN CARD */}
       <div className="bg-white rounded-[30px] shadow-xl w-full max-w-7xl p-3">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 h-full">
